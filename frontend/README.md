@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend UI - PrimeTrade
 
-## Getting Started
+A modern React/Next.js frontend for the PrimeTrade REST API featuring user authentication, dashboard, and task management.
 
-First, run the development server:
+## Features
 
+- ✅ User registration & login
+- ✅ JWT authentication with token management
+- ✅ Protected dashboard
+- ✅ Task CRUD operations (Create, Read, Update, Delete)
+- ✅ Responsive design with Tailwind CSS
+- ✅ Error handling & validation
+- ✅ Loading states
+- ✅ Auto-redirect based on auth status
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Axios** - HTTP client
+- **Context API** - State management
+
+## Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create `.env.local` file:
+```bash
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/v1
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running the Application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Development mode:
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Open browser
+# http://localhost:3000
+```
+
+## Pages
+
+- **Login** (`/login`) - User authentication
+- **Register** (`/register`) - New user registration
+- **Dashboard** (`/dashboard`) - View all tasks
+- **Create Task** (`/tasks/create`) - Create new task
+- **Edit Task** (`/tasks/[id]`) - Edit existing task
+
+## Authentication
+
+- JWT token-based authentication
+- Automatic redirect to login if not authenticated
+- Token persisted in localStorage
+- Auto-logout on token expiration (401 response)
+
+## Deployment
+
+### Vercel (Recommended)
+```bash
+npm run build
+vercel
+```
+
+### Build for Production
+```bash
+npm run build
+npm start
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
