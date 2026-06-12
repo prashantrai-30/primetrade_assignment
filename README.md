@@ -275,32 +275,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/v1
    - Error tracking (Sentry)
    - Logging (ELK stack)
 
-### Deployment Checklist
-- [ ] Environment variables configured
-- [ ] Database connection tested
-- [ ] JWT secrets are strong and unique
-- [ ] CORS configured for production domain
-- [ ] Error handling tested
-- [ ] Input validation working
-- [ ] Frontend build successful
-- [ ] API endpoints documented
-- [ ] Security headers configured
-- [ ] Rate limiting implemented
 
-### Deployment Platforms
-
-**Backend**
-- Heroku
-- AWS (EC2, Elastic Beanstalk)
-- DigitalOcean
-- Railway
-- Render
-
-**Frontend**
-- Vercel (recommended)
-- Netlify
-- AWS Amplify
-- Firebase Hosting
 
 ## Performance Optimization
 
@@ -318,20 +293,6 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/v1
 - CSS minification
 - Lazy loading
 - Caching strategies
-
-## Testing
-
-### Backend Testing (TODO)
-- Unit tests for controllers
-- Integration tests for API
-- Database tests
-- Authentication tests
-
-### Frontend Testing (TODO)
-- Component tests
-- Integration tests
-- E2E tests
-- Performance tests
 
 ## Git Repository Setup
 
@@ -351,30 +312,26 @@ git remote add origin <your-repo-url>
 git push -u origin main
 ```
 
-## Development Workflow
+## Running the Application
 
-1. **Backend Development**
-   ```bash
-   cd backend
-   npm run dev
-   ```
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm run dev
+# Server runs on http://localhost:5000/api/v1
+```
 
-2. **Frontend Development**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
+npm run dev
+# App runs on http://localhost:3000
+```
 
-3. **API Testing**
-   - Use Postman or REST Client
-   - Test endpoints with different inputs
-   - Verify error handling
-
-4. **Frontend Testing**
-   - Test in browser (http://localhost:3000)
-   - Test authentication flow
-   - Test CRUD operations
-   - Test responsive design
+**Test the App:**
+- Go to http://localhost:3000
+- Register → Login → Create/Edit/Delete Tasks
+- Use Postman for API testing (see `backend/docs/PrimeTrade-API.postman_collection.json`)
 
 ## Troubleshooting
 
@@ -418,18 +375,9 @@ Solution:
 - Restart dev server
 ```
 
-## Next Steps
+## What's Included
 
-1. Set up MongoDB Atlas (cloud database)
-2. Add input sanitization (express-validator)
-3. Implement rate limiting (express-rate-limit)
-4. Add email verification (nodemailer)
-5. Implement password reset
-6. Add unit and integration tests
-7. Set up CI/CD pipeline
-8. Deploy to cloud platforms
-9. Add API versioning
-10. Implement comprehensive logging
+
 
 ## Resources
 
